@@ -1,0 +1,31 @@
+syntax = "proto3";  // 使用 proto3 语法
+
+// 加法请求：包含两个操作数
+message AddRequest {
+  int32 a = 1;  // 第一个数
+  int32 b = 2;  // 第二个数
+}
+
+// 加法响应：包含结果
+message AddResponse {
+  int32 result = 1;  // 和
+}
+
+// 减法请求：包含两个操作数
+message SubtractRequest {
+  int32 a = 1;  // 被减数
+  int32 b = 2;  // 减数
+}
+
+// 减法响应：包含结果
+message SubtractResponse {
+  int32 result = 1;  // 差
+}
+
+// 定义服务：计算器
+service Calculator {
+  // 加法：接收两个整数，返回和
+  rpc Add(AddRequest) returns (AddResponse);
+  // 减法：接收两个整数，返回差
+  rpc Subtract(SubtractRequest) returns (SubtractResponse);
+}
