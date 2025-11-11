@@ -1,6 +1,23 @@
 ### grpc-cpp-demo
 这是一个grpc的加减法demo。
 
+项目目录如下
+```tree
+├── CMakeLists.txt
+├── proto
+│   └── calculator.proto
+├── README.md
+├── scripts
+│   └── proto.sh
+└── src
+    ├── client.cpp
+    ├── generated
+    │   ├── calculator.grpc.pb.cc
+    │   ├── calculator.grpc.pb.h
+    │   ├── calculator.pb.cc
+    │   └── calculator.pb.h
+    └── server.cpp
+```
 
 
 ### 前置准备
